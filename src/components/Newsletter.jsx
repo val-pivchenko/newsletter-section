@@ -50,21 +50,6 @@ const Newsletter = () => {
         "Failed to subscribe. Please ensure your email is correct or try again later."
       );
     }
-
-    const response = await fetch(
-      "https://www.greatfrontend.com/api/projects/challenges/newsletter",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: userEmail,
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    console.log(data);
   };
 
   return (
